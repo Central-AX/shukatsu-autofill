@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>マイページ登録 | 株式会社サンプル商事 新卒採用</title>
+<!-- 試し用の架空マイページ。株式会社サンプル商事は実在しない企業。送信先は無く、どこにもデータを送らない -->
+<style>
+  :root { --navy: #1d3a6e; --navy-2: #2b4f8f; --ink: #222; --sub: #666; --line: #d8dde6; --th: #f2f4f8; --req: #d9363e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; color: var(--ink); background: #eef1f5; font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif; font-size: 15px; line-height: 1.6; }
+  header { background: #fff; border-bottom: 3px solid var(--navy); }
+  .head { max-width: 960px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; gap: 14px; }
+  .logo { width: 40px; height: 40px; border-radius: 6px; background: var(--navy); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 18px; letter-spacing: .02em; }
+  .corp { line-height: 1.3; }
+  .corp b { display: block; font-size: 17px; }
+  .corp span { font-size: 12px; color: var(--sub); }
+  .year { margin-left: auto; font-size: 13px; color: var(--navy); border: 1px solid var(--navy); border-radius: 3px; padding: 2px 10px; }
+  main { max-width: 960px; margin: 24px auto 40px; padding: 0 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 28px 32px 32px; }
+  h1 { margin: 0 0 18px; font-size: 22px; color: var(--navy); }
+  .steps { display: flex; margin: 0 0 22px; padding: 0; list-style: none; counter-reset: s; }
+  .steps li { flex: 1; text-align: center; padding: 8px 4px; font-size: 13px; background: #e7ebf2; color: var(--sub); position: relative; }
+  .steps li + li { margin-left: 4px; }
+  .steps li.now { background: var(--navy); color: #fff; font-weight: 700; }
+  .intro { margin: 0 0 22px; font-size: 14px; color: #444; }
+  .req, .opt { display: inline-block; font-size: 11px; line-height: 1; padding: 3px 6px; border-radius: 2px; margin-left: 8px; vertical-align: 2px; font-weight: 400; }
+  .req { background: var(--req); color: #fff; }
+  .opt { background: #9aa3af; color: #fff; }
+  h2 { font-size: 16px; margin: 26px 0 0; padding: 8px 12px; background: var(--navy); color: #fff; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid var(--line); padding: 12px 14px; text-align: left; vertical-align: middle; }
+  th { width: 230px; background: var(--th); font-weight: 700; font-size: 14px; }
+  input[type=text], input[type=email], input[type=tel], select {
+    font: inherit; font-size: 15px; padding: 7px 9px; border: 1px solid #b9c0cc; border-radius: 3px; background: #fff; color: var(--ink);
+  }
+  input:focus, select:focus { outline: 2px solid #9ab6e6; border-color: var(--navy-2); }
+  .w-s { width: 70px; } .w-m { width: 160px; } .w-l { width: 100%; max-width: 420px; }
+  .pair { display: inline-flex; align-items: center; gap: 6px; margin-right: 18px; }
+  .pair > span { font-size: 13px; color: var(--sub); }
+  .sep { margin: 0 6px; color: var(--sub); }
+  .unit { margin: 0 12px 0 4px; }
+  .note { display: block; margin-top: 6px; font-size: 12px; color: var(--sub); }
+  .radios label { margin-right: 22px; cursor: pointer; }
+  .radios input { margin-right: 5px; vertical-align: -1px; }
+  .agree { margin: 28px 0 0; padding: 16px; background: #f7f8fa; border: 1px solid var(--line); text-align: center; font-size: 14px; }
+  .actions { text-align: center; margin-top: 22px; }
+  .actions button { font: inherit; font-weight: 700; font-size: 16px; padding: 13px 60px; background: var(--navy); color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+  .actions button:hover { background: var(--navy-2); }
+  #demoMsg { margin-top: 12px; font-size: 13px; color: var(--sub); min-height: 1.5em; }
+  footer { text-align: center; font-size: 12px; color: #8a93a0; padding: 0 0 28px; }
+  @media (max-width: 720px) {
+    .card { padding: 20px 16px; }
+    th, td { display: block; width: 100%; }
+    th { border-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="head">
+    <div class="logo">S</div>
+    <div class="corp"><b>株式会社サンプル商事</b><span>新卒採用マイページ</span></div>
+    <div class="year">2028年卒</div>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <h1>マイページ登録</h1>
+    <ol class="steps">
+      <li class="now">1. 情報の入力</li>
+      <li>2. 入力内容の確認</li>
+      <li>3. 登録完了</li>
+    </ol>
+    <p class="intro">以下の項目をご入力のうえ、「確認画面へ進む」ボタンを押してください。<span class="req">必須</span>の項目は必ずご入力ください。</p>
+
+    <form id="entry" autocomplete="off" novalidate>
+      <h2>基本情報</h2>
+      <table>
+        <tr>
+          <th>氏名<span class="req">必須</span></th>
+          <td>
+            <span class="pair"><span>姓</span><input type="text" name="sei" id="sei" class="w-m"></span>
+            <span class="pair"><span>名</span><input type="text" name="mei" id="mei" class="w-m"></span>
+          </td>
+        </tr>
+        <tr>
+          <th>フリガナ（半角カナ）<span class="req">必須</span></th>
+          <td>
+            <span class="pair"><input type="text" name="sei_kana" class="w-m" placeholder="ｾｲ"></span>
+            <span class="pair"><input type="text" name="mei_kana" class="w-m" placeholder="ﾒｲ"></span>
+            <span class="note">※半角カタカナでご入力ください</span>
+          </td>
+        </tr>
+        <tr>
+          <th>氏名（ローマ字）<span class="req">必須</span></th>
+          <td>
+            <span class="pair"><span>姓</span><input type="text" name="sei_roma" class="w-m" placeholder="例）YAMADA"></span>
+            <span class="pair"><span>名</span><input type="text" name="mei_roma" class="w-m" placeholder="例）TARO"></span>
+            <span class="note">※半角英字（大文字）でご入力ください</span>
+          </td>
+        </tr>
+        <tr>
+          <th>生年月日<span class="req">必須</span></th>
+          <td>
+            <select name="birth_y" id="birth_y"></select><span class="unit">年</span>
+            <select name="birth_m" id="birth_m"></select><span class="unit">月</span>
+            <select name="birth_d" id="birth_d"></select><span class="unit">日</span>
+          </td>
+        </tr>
+        <tr>
+          <th>性別<span class="opt">任意</span></th>
+          <td class="radios">
+            <label><input type="radio" name="gender" value="1">男性</label>
+            <label><input type="radio" name="gender" value="2">女性</label>
+            <label><input type="radio" name="gender" value="9">回答しない</label>
+          </td>
+        </tr>
+        <tr>
+          <th>メールアドレス<span class="req">必須</span></th>
+          <td><input type="email" name="email" class="w-l"><span class="note">※選考に関するご連絡はこのアドレスにお送りします</span></td>
+        </tr>
+        <tr>
+          <th>メールアドレス（確認用）<span class="req">必須</span></th>
+          <td><input type="email" name="email_confirm" class="w-l"><span class="note">※確認のため、もう一度ご入力ください</span></td>
+        </tr>
+        <tr>
+          <th>携帯電話番号<span class="req">必須</span></th>
+          <td>
+            <input type="tel" name="tel1" class="w-s" maxlength="3"><span class="sep">-</span><input type="tel" name="tel2" class="w-s" maxlength="4"><span class="sep">-</span><input type="tel" name="tel3" class="w-s" maxlength="4">
+            <span class="note">※半角数字でご入力ください</span>
+          </td>
+        </tr>
+      </table>
+
+      <h2>現住所</h2>
+      <table>
+        <tr>
+          <th>郵便番号<span class="req">必須</span></th>
+          <td><span class="sep">〒</span><input type="text" name="zip1" class="w-s" maxlength="3"><span class="sep">-</span><input type="text" name="zip2" class="w-s" maxlength="4"></td>
+        </tr>
+        <tr>
+          <th>都道府県<span class="req">必須</span></th>
+          <td><select name="pref" id="pref"></select></td>
+        </tr>
+        <tr>
+          <th>市区町村<span class="req">必須</span></th>
+          <td><input type="text" name="addr_city" class="w-l" placeholder="例）〇〇市〇〇区"></td>
+        </tr>
+        <tr>
+          <th>番地<span class="req">必須</span></th>
+          <td><input type="text" name="addr_street" class="w-l" placeholder="例）〇〇町1-2-3"></td>
+        </tr>
+        <tr>
+          <th>建物名・部屋番号<span class="opt">任意</span></th>
+          <td><input type="text" name="addr_building" class="w-l"></td>
+        </tr>
+      </table>
+
+      <h2>学校情報</h2>
+      <table>
+        <tr>
+          <th>学校区分<span class="req">必須</span></th>
+          <td>
+            <select name="school_type">
+              <option value="">選択してください</option>
+              <option value="1">大学</option>
+              <option value="2">大学院（修士課程）</option>
+              <option value="3">大学院（博士課程）</option>
+              <option value="4">短期大学</option>
+              <option value="5">高等専門学校</option>
+              <option value="6">専門学校</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>大学名<span class="req">必須</span></th>
+          <td><input type="text" name="school_name" class="w-l" placeholder="例）〇〇大学"></td>
+        </tr>
+        <tr>
+          <th>学部名<span class="req">必須</span></th>
+          <td><input type="text" name="faculty" class="w-l"></td>
+        </tr>
+        <tr>
+          <th>学科名<span class="req">必須</span></th>
+          <td><input type="text" name="department" class="w-l"></td>
+        </tr>
+        <tr>
+          <th>文理区分<span class="req">必須</span></th>
+          <td class="radios">
+            <label><input type="radio" name="bunri" value="1">文系</label>
+            <label><input type="radio" name="bunri" value="2">理系</label>
+          </td>
+        </tr>
+        <tr>
+          <th>卒業予定年月<span class="req">必須</span></th>
+          <td>
+            <select name="grad_y" id="grad_y"></select><span class="unit">年</span>
+            <select name="grad_m" id="grad_m"></select><span class="unit">月</span>
+          </td>
+        </tr>
+      </table>
+
+      <div class="agree"><label><input type="checkbox" name="agree"> 個人情報の取り扱いに同意する</label></div>
+      <div class="actions">
+        <button type="submit">確認画面へ進む</button>
+        <div id="demoMsg" role="status"></div>
+      </div>
+    </form>
+  </div>
+</main>
+<footer>© 株式会社サンプル商事（試し用の架空の企業・ページです。入力した内容はどこにも送信されません）</footer>
+
+<script>
+  // 選択肢を作る（年・月・日・都道府県）
+  function fill(id, items, placeholder) {
+    const s = document.getElementById(id);
+    s.add(new Option(placeholder, ''));
+    for (const [text, value] of items) s.add(new Option(text, value));
+  }
+  const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
+  fill('birth_y', range(1995, 2010).map((y) => [String(y), String(y)]), '----');
+  fill('birth_m', range(1, 12).map((m) => [String(m), String(m).padStart(2, '0')]), '--');
+  fill('birth_d', range(1, 31).map((d) => [String(d), String(d).padStart(2, '0')]), '--');
+  fill('grad_y', range(2026, 2030).map((y) => [String(y), String(y)]), '----');
+  fill('grad_m', range(1, 12).map((m) => [String(m), String(m)]), '--');
+  const PREFS = ['北海道','青森県','岩手県','宮城県','秋田県','山形県','福島県','茨城県','栃木県','群馬県','埼玉県','千葉県','東京都','神奈川県','新潟県','富山県','石川県','福井県','山梨県','長野県','岐阜県','静岡県','愛知県','三重県','滋賀県','京都府','大阪府','兵庫県','奈良県','和歌山県','鳥取県','島根県','岡山県','広島県','山口県','徳島県','香川県','愛媛県','高知県','福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県'];
+  fill('pref', PREFS.map((p, i) => [p, String(i + 1).padStart(2, '0')]), '選択してください');
+
+  // 送信はしない（試し用）
+  document.getElementById('entry').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('demoMsg').textContent = '試し用の架空のページのため、送信は行われません。';
+  });
+</script>
+</body>
+</html>

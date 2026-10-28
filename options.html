@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロフィール登録 - 就活マイページ自動入力</title>
+<link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1><img src="icons/icon48.png" alt="" width="28" height="28">就活マイページ自動入力 プロフィール登録</h1>
+      <p class="lead">ここに登録した内容で、マイページ登録フォームを埋めます。保存先はこのPCのChrome内だけで、外部へは一切送りません。</p>
+      <p class="credit">作: <a href="#" data-link="CREDIT_URL">まつじゅん（YouTube @matsujun_ai）</a></p>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="first-time" id="firstTime" hidden>
+      <strong>はじめに、架空のデータで試してみましょう</strong>
+      <ol>
+        <li>下の「ダミー値を入れる」を押して、「保存する」を押す（架空の人物「山田太郎」のデータが入ります）</li>
+        <li><a href="#" data-link="DEMO_URL">試し用ページ</a>を開き、ツールバーの拡張ボタン →「このページを自動入力」を押して、欄が埋まるのを確かめる</li>
+        <li>うまく動いたら、この画面で自分の情報に書き換えて「保存する」を押す</li>
+      </ol>
+    </div>
+    <form id="form" autocomplete="off"></form>
+    <div class="bar">
+      <button type="button" id="dummy" class="secondary">ダミー値を入れる</button>
+      <button type="button" id="clear" class="secondary">すべて消去</button>
+      <span class="spacer"></span>
+      <span id="msg" role="status" aria-live="polite"></span>
+      <button type="button" id="save" class="primary">保存する</button>
+    </div>
+  </main>
+  <script src="src/matcher.js"></script>
+  <script src="src/links.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

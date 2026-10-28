@@ -1,0 +1,22 @@
+:root { --green: #1f9d55; --green-dark: #17803f; --ink: #1f2933; --sub: #616e7c; --line: #e4e7eb; }
+* { box-sizing: border-box; }
+body { margin: 0; width: 300px; font-family: "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif; color: var(--ink); background: #fff; }
+main { padding: 16px; }
+.brand { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--sub); margin-bottom: 14px; }
+#fill {
+  width: 100%; padding: 18px 12px; border: 0; border-radius: 10px; cursor: pointer;
+  background: var(--green); color: #fff; font-size: 18px; font-weight: 700; letter-spacing: .04em;
+  box-shadow: 0 2px 0 var(--green-dark);
+}
+#fill:hover { background: var(--green-dark); }
+#fill:active { transform: translateY(1px); box-shadow: none; }
+#fill:disabled { background: #9aa5b1; box-shadow: none; cursor: default; }
+#status { min-height: 1.6em; margin: 12px 0 0; font-size: 14px; font-weight: 700; text-align: center; }
+#status.ok { color: var(--green-dark); }
+#status.warn { color: #b44d12; font-weight: 400; font-size: 13px; }
+.foot { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--line); text-align: center; font-size: 12px; }
+.foot a { color: var(--sub); }
+.check { margin: 10px 0 0; font-size: 11.5px; color: var(--sub); text-align: center; }
+.credit { margin: 8px 0 0; font-size: 11px; color: #9aa5b1; text-align: center; }
+.credit a { color: #9aa5b1; }
+.credit a:hover { color: var(--sub); }
